@@ -1,4 +1,4 @@
-	<form id="search-payroll" action="#" method="POST">
+	<form id="search-payroll" action="../models/searchpayroll.php" method="POST">
 				<div class="mdl-textfield mdl-js-textfield">
 					
 					<label class="mdl-textfield__label" for="clientname">Client Name</label>
@@ -12,18 +12,18 @@
 					<label class="mdl-textfield__label" for="month">Month</label>
 					<select class="mdl-textfield__input" name="month" id="month">
 					  <option value="" selected disabled>Month</option>
-					  <option value="January">January</option>
-					  <option value="February">February</option>
-					  <option value="March">March</option>
-					  <option value="April">April</option>
-					  <option value="May">May</option>
-					  <option value="June">June</option>
-					  <option value="July">July</option>
-					  <option value="August">August</option>
-					  <option value="September">September</option>
-					  <option value="October">October</option>
-					  <option value="November">November</option>
-					  <option value="December">December</option>
+					  <option value="JAN">January</option>
+					  <option value="FEB">February</option>
+					  <option value="MAR">March</option>
+					  <option value="APR">April</option>
+					  <option value="MAY">May</option>
+					  <option value="JUN">June</option>
+					  <option value="JUL">July</option>
+					  <option value="AUG">August</option>
+					  <option value="SEP">September</option>
+					  <option value="OCT">October</option>
+					  <option value="NOV">November</option>
+					  <option value="DEC">December</option>
 					</select>
 					
 				</div>
@@ -31,8 +31,8 @@
 					
 					<label class="mdl-textfield__label" for="period">Period</label>
 					<select class="mdl-textfield__input" name="period" id="period">
-					  <option value="1-15">1-15</option>
-					  <option value="16-30">16-30</option>
+					  <option value="115">1-15</option>
+					  <option value="1630">16-30</option>
 					</select>
 					
 				</div>

@@ -39,7 +39,7 @@
     <div class="page-content">
       <div class="mdl-grid">
 
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-phone submenu-module">
+        <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone submenu-module">
           <div class="page-title-menu"  style="background: rgb(255, 87, 34)">
               <h2>General
               </br> Payroll </h2>
