@@ -4,7 +4,7 @@
 		<div id="login-pane" class="mdl-card mdl-shadow--2dp">
 			<div class="logo logo-login"></div>
 			
-			<form id="login-form" method="POST" action="home.php">
+			<form id="login-form" method="POST" action="dashboard/index.php">
 				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
 					<input class="mdl-textfield__input" type="text" id="username"/>
 					<label class="mdl-textfield__label" for="username">Username</label>

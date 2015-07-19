@@ -30,16 +30,16 @@
   <div class="mdl-layout__drawer mdl-layout--large-screen-only">
     <span class="mdl-layout-title">QuickTrack DMS</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="payroll">General Payroll</a>
-      <a class="mdl-navigation__link" href="">Billing</a>
-      <a class="mdl-navigation__link" href="">SG Daily Logbook</a>
+      <a class="mdl-navigation__link" href="payroll.php">General Payroll</a>
+      <a class="mdl-navigation__link" href="billing.php">Billing</a>
+      <a class="mdl-navigation__link" href="logbook.php">SG Daily Logbook</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
     <div class="page-content">
       <div class="mdl-grid">
 
-        <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-phone submenu-module">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--12-col-phone submenu-module">
           <div class="page-title-menu"  style="background: rgb(255, 87, 34)">
               <h2>General
               </br> Payroll </h2>
@@ -52,9 +52,6 @@
             <?php include 'payroll-content.php'; ?>
         </div>
       </div>
-
-
-      
 
        
     </div>

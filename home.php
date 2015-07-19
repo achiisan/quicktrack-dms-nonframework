@@ -1,5 +1,4 @@
 
-
 <div class="mdl-grid">
   <!-- border L -->
   <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--hide-phone"></div>
@@ -28,7 +27,7 @@
               <h2>Billing</h2>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <a href="billing.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               View Dashboard
             </a>
           </div>
@@ -42,7 +41,7 @@
               <h2>SG Daily Logbook</h2>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <a href="logbook.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               View Dashboard
             </a>
         </div>
