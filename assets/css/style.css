@@ -1,0 +1,84 @@
+body{
+width: 100%;
+  background: #F0F0F0;
+}
+.logo {
+background: url('../img/QT-DMS.png')center no-repeat;
+background-size: cover;
+
+}
+
+/*login page*/
+#login-pane{
+width: 50%;
+height: 300px;
+background: white;
+margin-left: 25%;
+margin-top: 10%;
+}
+
+.logo-login {
+	width: 65%;
+	height: 100px;
+	margin-top: 3%;
+	margin-left: 20%;
+}
+
+#login-form {
+	width: 50%;
+	margin-left: 30%;
+}
+
+#login-form input[type="submit"]{
+	margin-left: 35%;
+}
+
+
+/*Homepage Dashboard*/
+
+.card-dashboard{
+width: 80%;
+min-width: 320px;
+height: 250px;
+margin-left: 10%;
+}
+
+#payroll .mdl-card__title {
+	background: rgb(255, 87, 34);
+	color: white;
+}
+
+#billing .mdl-card__title {
+	background: rgb(76,175,80);
+	color: white;
+
+}
+
+#logbook .mdl-card__title {
+	background: rgb(63,81,181);
+	color: white;
+
+}
+
+/*Module dashboard/functions*/
+
+.submenu-module {
+	background: rgb(55, 71, 79);
+	margin: -10px;
+	height: 100%;
+	position: absolute;
+}
+
+.content-module {
+	margin-left: 15%;
+	
+}
+
+.page-title-menu{
+width: 100%;
+color: white;
+margin-top: -21px;
+padding-top: 15px;
+padding-bottom:10px;
+text-align: center;
+}
