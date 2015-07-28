@@ -1,11 +1,16 @@
 
+
 <div class="mdl-grid">
   <!-- border L -->
   <div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--hide-phone"></div>
 
 
   <div class="mdl-cell mdl-cell--10-col mdl-grid">
-    <h3>Hello, User! Please choose a module to manage: </br></h3>
+
+    <div class="mdl-cell mdl-cell--12-col">
+      <h3 align="center">Hello, <?php echo $_SESSION['login-user'];?>!</br></h3>
+    </div>
+
     <div class="mdl-cell mdl-cell--4-col">
 
       <div id="payroll" class="mdl-card mdl-shadow--2dp through mdl-shadow--8dp card-dashboard">

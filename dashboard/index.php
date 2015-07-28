@@ -1,3 +1,12 @@
+
+<?php
+  error_reporting(E_ERROR); //Remove any error prompts
+
+  session_start();
+  if ($_SESSION['auth'] == null){
+    header("Location: ../index.php");
+  }//if the user is already logged in, continue to home
+?>
 <!DOCTYPE html>
 <html>
 
@@ -5,7 +14,6 @@
   <title>QuickTrack DMS</title>
   <link rel="stylesheet" href="..//assets/mdl/material.min.css">
    <script src="..//assets//mdl/material.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>

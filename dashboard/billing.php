@@ -1,3 +1,12 @@
+
+<?php
+  error_reporting(E_ERROR); //Remove any error prompts
+
+  session_start();
+  if ($_SESSION['auth'] == null){
+    header("Location: ../index.php");
+  }//if the user is already logged in, continue to home
+?>
 <!DOCTYPE html>
 <html>
 
@@ -48,7 +57,9 @@
 
         <div class="mdl-cell mdl-cell--9-col mdl-cell-12-col-phone content-module">
          
+
             <?php include 'payroll-content.php'; ?>
+
         </div>
       </div>
 

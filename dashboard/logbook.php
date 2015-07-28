@@ -48,7 +48,7 @@
 
         <div class="mdl-cell mdl-cell--9-col mdl-cell-12-col-phone content-module">
          
-            <?php include 'payroll-content.php'; ?>
+
         </div>
       </div>
 

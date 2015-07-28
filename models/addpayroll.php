@@ -3,14 +3,14 @@
 
 include '../models/connect.php';
 $client = $_POST['client'];
-$period = $_POST['month'] . ' '. $_POST['period'];
+$period = $_POST['month'] . '-'. $_POST['period'].'-'. $_POST['year'];
 
 
 $images = array();
 $fname = array();
 $mname = array();
 $lname = array();
-
+$bday = array();
 
 $query =  'INSERT INTO tbl_payroll (PAYROLL_CLIENT, PAYROLL_PERIOD) VALUES ("'.$client.'","'.$period.'")';
 $result = mysqli_query($con, $query) or die(mysqli_error($con));
@@ -28,11 +28,12 @@ for($i=1; $i<31; $i++){
 		array_push($images, $_POST['imglink'.$i]);
 
 	
-	for($j=1; $j<26; $j++){
-		
+
+	for($j=1; $j<31; $j++){
 		array_push($lname, $_POST[$i.'lname'.$j]);
 		array_push($fname, $_POST[$i.'fname'.$j]);
 		array_push($mname, $_POST[$i.'mname'.$j]);
+		array_push($bday, $_POST[$i.'bday'.$j]);
 	}
 }
 
@@ -55,12 +56,12 @@ for($i=1; $i<31; $i++){
 
 			for($j=1; $j<26; $j++){
 
-				if($mname[$j-1] == '' && $fname[$j-1] == '' && $lname[$j-1] == ''){
+
+				if($mname[$j-1] == '' && $fname[$j-1] == '' && $lname[$j-1] == '' && $bday[$j-1] == ''){
 					
 				}else{
-					
-					
-					$query =  'INSERT INTO tbl_personpages (PERSONPAGES_PAYROLLID, PERSONPAGES_PAYROLLPAGEID, PERSONPAGES_LASTNAME, PERSONPAGES_FIRSTNAME, PERSONPAGES_MIDDLENAME) VALUES ("'.$pid.'","'.$pid_pp.'","'.$lname[$j-1].'", "'.$fname[$j-1].'", "'.$mname[$j-1].'")';
+
+					$query =  'INSERT INTO tbl_personpages (PERSONPAGES_PAYROLLID, PERSONPAGES_PAYROLLPAGEID, PERSONPAGES_LASTNAME, PERSONPAGES_FIRSTNAME, PERSONPAGES_MIDDLENAME, PERSONPAGES_DATEOFBIRTH) VALUES ("'.$pid.'","'.$pid_pp.'","'.$lname[$j-1].'", "'.$fname[$j-1].'", "'.$mname[$j-1].'", "'.$bday[$j-1].'")';
 					$result = mysqli_query($con, $query) or die(mysqli_error($con));
 				}
 	
