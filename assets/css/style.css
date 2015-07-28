@@ -1,12 +1,24 @@
+@import url("foundation-icons.css");
+
 body{
 width: 100%;
   background: #F0F0F0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	 font-family: 'Montserrat', sans-serif;
 }
 .logo {
-background: url('../img/QT-DMS.png')center no-repeat;
+background: url('../img/QT-DMS-engraved.png')center no-repeat;
 background-size: cover;
 
 }
+@font-face{
+	font-family: 'Montserrat';
+	src:url('Montserrat-Regular.ttf');
+}
+
 
 /*login page*/
 #login-pane{
@@ -62,30 +74,30 @@ margin-left: 10%;
 
 /*Module dashboard/functions*/
 
-.main-content{
-overflow-x: hidden;
-overflow-y: hidden;
-}
+
 
 .submenu-module {
 	background: rgb(55, 71, 79);
 	margin: -7px;
-	height:100vh;
+	height: 50px;
+	overflow: hidden;
+	width: 110%;
+	padding: 0px;
 	
 }
 
-.content-module {
-	
-	
-}
 
 .page-title-menu{
-width: 100%;
 color: white;
-margin-top: -21px;
-padding-top: 15px;
-padding-bottom:10px;
 text-align: center;
+margin: -10px;
+padding-left: 20px;
+
+}
+
+.page-title-menu h4{
+font-size: 35px;
+
 }
 
 .card-pages {

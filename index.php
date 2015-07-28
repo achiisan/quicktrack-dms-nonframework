@@ -5,7 +5,7 @@
 
 	session_start();
 	if ($_SESSION['auth'] == 1){
-		header("Location: home.php");
+		header("Location: dashboard");
 	}//if the user is already logged in, continue to home
 ?>
 

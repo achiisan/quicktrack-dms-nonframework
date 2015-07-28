@@ -9,8 +9,8 @@
 
   
   <link rel="stylesheet" href="../assets/css/style.css">
-  <!-- // <script src="../assets/js/jquery-1.11.3.min.js "></script> -->
-  <!-- // <script src="../assets/js/qtdms.js "></script> -->
+ <script src="../assets/js/jquery-1.11.3.min.js "></script>
+   <script src="../assets/js/qtdms.js "></script>
 
 </head>
 
@@ -22,9 +22,10 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
+      <span class="fi-list"></span>
       <a href="index.php">
       <span class="mdl-layout-title">
-        <img src="../assets/img/QT-DMS.png" width="200"/>
+        <img src="../assets/img/QT-DMS-engraved.png" width="200"/>
       </span>
     </a>
       <!-- Add spacer, to align navigation to the right -->
@@ -46,14 +47,13 @@
     <div class="page-content">
       <div class="mdl-grid">
 
-        <div class="mdl-cell mdl-cell--3-col submenu-module">
+        <div class="mdl-cell mdl-cell--12-col mdl-grid submenu-module ">
 
-          <div class="page-title-menu"  style="background: rgb(255, 87, 34)">
-              <h2>General
-              </br> Payroll </h2>
+          <div class="mdl-cell mdl-cell--4-col page-title-menu"  style="background: rgb(255, 87, 34)">
+              <h4>General Payroll </h4>
           </div>
 
-          <nav class="submenu-nav">
+          <nav class="mdl-cell mdl-cell--8-col">
               
                 <div class="nav-pages"  onclick="toggletabs('#add')">
                   <strong>New Payroll Record</strong>
@@ -73,9 +73,9 @@
         </div>
 
 
-        <div class="mdl-cell mdl-cell--9-col content-module">
+        <div class="mdl-cell mdl-cell--12-col content-module">
          
-            <?php include 'payroll-content.php'; ?>
+            <?php //include 'payroll-content.php'; ?>
 
         </div>
       </div>
