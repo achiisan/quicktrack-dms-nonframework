@@ -56,6 +56,7 @@
 				while($values1 = mysqli_fetch_array($result)){
 					$payroll_id = $values1['PAYROLL_ID'];
 				?>
+
 					<div class="mdl-card mdl-shadow--3dp card-search">
 					  <div class="mdl-card__title" style="background: red; color: white;">
 					    <h2 class="mdl-card__title-text"><?php echo $values1['PAYROLL_CLIENT']; ?></h2>
@@ -74,7 +75,7 @@
 
 					  </div>
 					  <div class="mdl-card__actions mdl-card--border mdl-grid">
-					  		<div class="mdl-cell mdl-cell--5-col">
+					  		<div class="mdl-cell mdl-cell--5-col tbl-long">
 						   		<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp tbl-long">
 									<thead>
 								    <tr>
@@ -107,12 +108,12 @@
 									?>
 								</table>
 							</div>
-							<div class="mdl-cell mdl-cell--7-col">
-								<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp tbl-long">
+							<div class="mdl-cell mdl-cell--7-col tbl-long">
+								<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp ">
 									<thead>
 								    <tr>
 								   		<th class="mdl-data-table__cell--non-numeric">Name</th>
-									    <th class="mdl-data-table__cell--non-numeric">Appears in Page #</th>
+									    <th class="mdl-data-table__cell--non-numeric">In Page #</th>
 									    
 								    </tr>
 								  </thead>

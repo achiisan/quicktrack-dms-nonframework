@@ -19,10 +19,13 @@
 <!-- ================================= -->
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
+  <header class="hdr-main">
+    <div class="mdl-layout__drawer-button">
+      <i class="fi-list"></i>
+    </div>
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="fi-list"></span>
+      
       <a href="index.php">
       <span class="mdl-layout-title">
         <img src="../assets/img/QT-DMS-engraved.png" width="200"/>
@@ -34,49 +37,60 @@
      
     </div>
   </header>
-  <div class="mdl-layout__drawer mdl-layout--large-screen-only">
-    <span class="mdl-layout-title">QuickTrack DMS</span>
-    <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="payroll.php">General Payroll</a>
-      <a class="mdl-navigation__link" href="billing.php">Billing</a>
-      <a class="mdl-navigation__link" href="logbook.php">SG Daily Logbook</a>
-    </nav>
-  </div>
+
 
   <main class="mdl-layout__content main-content">
     <div class="page-content">
       <div class="mdl-grid">
 
         <div class="mdl-cell mdl-cell--12-col mdl-grid submenu-module ">
-
+          
           <div class="mdl-cell mdl-cell--4-col page-title-menu"  style="background: rgb(255, 87, 34)">
               <h4>General Payroll </h4>
           </div>
 
           <nav class="mdl-cell mdl-cell--8-col">
-              
-                <div class="nav-pages"  onclick="toggletabs('#add')">
-                  <strong>New Payroll Record</strong>
-                    <hr>
+              <a href="#m1">
+                <div  id="m1" class="nav-pages"  onclick="toggletabs('#add')">
+                  <div class="nav-pages-wrapper">
+                      <span class="icon fi-plus"></span>
+                      <strong>New Payroll Record</strong>
+                    </div>
+                  </div>
+              </a>
+
+              <a href="#m2">
+                <div id="m2" class="nav-pages" onclick="toggletabs('#search')">
+                  <div class="nav-pages-wrapper">
+                      <span class="icon fi-magnifying-glass"></span>
+                      <strong>Search  Records</strong>
+                  </div>
+              </div>
+               </a>
+               <a href="#m3">
+                  <div id="m3" class="nav-pages">
+                  
+                   <div class="nav-pages-wrapper">
+                      <span class="icon fi-thumbnails"></span>
+                      <strong>View All Records</strong>
+                    </div>
+                
                 </div>
-              
-              <div class="nav-pages" onclick="toggletabs('#search')">
-                <strong>Search Records</strong>
-                <hr>
-              </div>
-              <div class="nav-pages">
-                <strong>View All Records</strong>
-                <hr>
-              </div>
+              </a>
 
           </nav>
         </div>
 
-
-        <div class="mdl-cell mdl-cell--12-col content-module">
+        <div class="mdl-cell mdl-cell--1-col">
+          &nbsp;
+        </div>
+        <div class="mdl-cell mdl-cell--10-col content-module">
          
-            <?php //include 'payroll-content.php'; ?>
+            <?php include 'payroll-content.php'; ?>
 
+        </div>
+         <div class="mdl-cell mdl-cell--1-col">
+          &nbsp;
         </div>
       </div>
 

@@ -1,6 +1,12 @@
 $(document).ready(function(){
-	$('.content-tab').hide();
-	toggletabs('#add');
+
+	
+	
+
+
+
+	$('#e1').css('display', 'block');
+	
 
 	$index = 1;
 	togglecards('#e'+$index);
@@ -21,14 +27,9 @@ $(document).ready(function(){
 			togglecards('#e'+$index);
 	});
 
-	$('.card-pages .mdl-data-table *').click(function(){
-		 $('#payrollpage').addClass('expand');
-		 $('.card-close').css("display","block")
-	});
 
-	$('.card-close').click(function(){
-		closecardwindow();
-	});
+	
+
 	// this is the id of the form
 	$("#search-payroll").submit(function() {
 
