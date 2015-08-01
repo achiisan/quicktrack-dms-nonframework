@@ -16,6 +16,10 @@ background: url('../img/QT-DMS-engraved.png')center no-repeat;
 background-size: cover;
 
 }
+
+a {
+	text-decoration: none;
+}
 @font-face{
 	font-family: 'Montserrat';
 	src:url('Montserrat-Regular.ttf');
@@ -26,12 +30,16 @@ background-size: cover;
 	z-index: 999;
 }
 
-.save-btn {
+.btn-float {
 	position: fixed;
 	bottom: 5%;
 	right: 10%;
 	z-index: 1000;
 	color: green;
+}
+
+.block-display {
+	display: block;
 }
 /*login page*/
 #login-pane{
@@ -68,6 +76,12 @@ height: 250px;
 margin-left: 10%;
 }
 
+.card-dashboard .mdl-card__title{
+	background: white;
+	color: black;
+}
+
+
 #payroll .mdl-card__title {
 	background: rgb(255, 87, 34);
 	color: white;
@@ -86,43 +100,22 @@ margin-left: 10%;
 }
 
 /*Module dashboard/functions*/
+.loading {
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	z-index: 1001;
+	display: none;
+}
 
-
-
+/*submenu*/
 .submenu-module {
-	background: rgb(55, 71, 79); /*grey */
 	margin: -7px;
 	height: 50px;
 	overflow: hidden;
 	width: 110%;
 	padding: 0px;
-	
-}
-
-
-.page-title-menu{
-color: white;
-text-align: center;
-margin: -10px;
-padding-left: 20px;
-
-}
-
-
-.page-title-menu h4{
-font-size: 35px;
-
-}
-
-
-
-
-.content-tab {
-	min-height: 100vh;
-}
-
-/*submenu*/
-.submenu-module {
+	background: rgb(55, 71, 79); /*grey */
 	position: fixed;
 	top: 70px;
 	left: -1px;
@@ -141,9 +134,11 @@ font-size: 35px;
 	padding-bottom: 10px;
 	margin-top: -8px;
 	height: 100%;
-	transition: all 2s;
+	transition: all 1s;
 	border-right: solid 1px white;
-	}
+}
+
+
 .nav-pages-wrapper{
 	width: 350px;
 	float: left;
@@ -162,14 +157,44 @@ font-size: 35px;
 	
 }
 
+
+.submenu-nav {
+	margin-top: 20px;
+}
+
+.page-title-menu{
+color: white;
+text-align: center;
+margin: -10px;
+padding-left: 20px;
+
+}
+
+.page-title-menu h4{
+font-size: 35px;
+
+}
+
+.content-tab {
+	/*min-height: 70vh;*/
+	display: none;
+	transition: all 1s;
+	height: cover;
+}
+
+#splash {
+	display: block;
+}
+
+
+
+/*Pagination*/
+
 #m1:target, #m2:target, #m3:target{
 	background: rgb(82, 193, 6);
 	width: 350px;
 	transition: all 1s;
 	
-}
-.submenu-nav {
-	margin-top: 20px;
 }
 
 
@@ -187,7 +212,7 @@ font-size: 35px;
 }
 
 
-/*Splash screen*/
+/*Splash screen- dashboard on payroll*/
 
 #splash {
 	background: url('../img/QTSILOGO.png') no-repeat;
@@ -278,7 +303,7 @@ font-size: 35px;
 	}
 	.card-full .mdl-textfield__label{
 		text-align: center;
-		
+
 	}
 /*Card containing scans*/
 .card-pages {
@@ -286,6 +311,7 @@ font-size: 35px;
 	height: auto;
 	margin-bottom: 10px;
 	display: none;
+	transition: all 1s;
 }
 
 .navi-button-cards {

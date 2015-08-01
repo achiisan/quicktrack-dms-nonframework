@@ -1,70 +1,70 @@
+// Javascript functions here are ONLY for main window, for AJAX called-pages, JS codes are in its respective pages.
+
+$(window).load(function() {
+		// Animate loader off screen
+		
+	});
+
+
 $(document).ready(function(){
+	$counter = 0;
 
+	$(".nav-add").click(function() {
+		
+			toggletabs("#add");
+			loadmodule("../qt_forms/form_addpayroll.php", "#add");
+			
 	
-	
-
-
-
-	$('#e1').css('display', 'block');
-	
-
-	$index = 1;
-	togglecards('#e'+$index);
-	$('#next').click(function(){
-		 event.preventDefault(); // cancel default behavior
-			$index = $index + 1;
-			if($index >= 30){
-				$index = 30;
-			}
-			togglecards('#e'+$index);
 	});
-	$('#prev').click(function(){
-		 event.preventDefault(); // cancel default behavior
-			$index = $index - 1
-			if($index <= 1){
-				$index = 1;
-			}
-			togglecards('#e'+$index);
+
+	$(".nav-search").click(function() {
+			
+				toggletabs("#search");
+				loadmodule("../qt_forms/form_searchpayroll.php", "#search-inner");
+			
+	});
+
+	$(".nav-all").click(function() {
+				toggletabs("#all");
+				loadmodule("../models/viewallpayroll.php", "#all");
 	});
 
 
-	
 
-	// this is the id of the form
-	$("#search-payroll").submit(function() {
+	if(window.location.hash == "#m1"){
+		toggletabs('#add');
+		loadmodule("../qt_forms/form_addpayroll.php", "#add");
+	}else if(window.location.hash == "#m2"){
+		toggletabs('#search');
+		loadmodule("../qt_forms/form_searchpayroll.php", "#search-inner");
+	}else if(window.location.hash == "#m3"){
+		toggletabs("#all");
+		loadmodule("../models/viewallpayroll.php", "#all");
+	}
 
-	    var url = "../models/searchpayroll.php"; // the script where you handle the form input.
-	    $('#search-results').empty(); 
-	     $('#search-results').append('  <div class="mdl-spinner mdl-js-spinner is-active"></div>');
 
-	  
+
+});
+function toggletabs($element){
+	$('.content-tab').hide(0);
+	$($element).show(500);
+}
+
+function loadmodule($url, $container) {
+		$($container).empty();
+	  	$('.loading').css('display', 'block');			
+	     
 	    $.ajax({
 	           type: "POST",
-	           url: url,
-	           data: $("#search-payroll").serialize(), // serializes the form's elements.
+	           url: $url,
+	           
 	           success: function(data)
 	           {
-	           	  $('#search-results').empty(data); 
-	             $('#search-results').append(data); // show response from the php script.
+	           	  $($container).empty(data); 
+	             $($container).append(data); // show response from the php script.
+	             	$('.loading').css('display', 'none');	
 	           }
 	         });
-
-	   return false;// avoid to execute the actual submit of the form.
-	});
-});
-
-function toggletabs($element){
-	$('.content-tab').fadeOut(500);
-	$($element).fadeIn(500);
-}
-
-function togglecards($elements){
-	$('.card-pages').fadeOut(500);
-	$($elements).fadeIn(500);
-}
-
-function closecardwindow() {
-	$('#payrollpage').removeClass('expand');
-	$('.card-close').css("display", "none");
-	return false;
+   
+		
 }

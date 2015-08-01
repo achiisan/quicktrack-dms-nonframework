@@ -13,11 +13,16 @@
 	$month = $_POST['month'];
 	$period = $_POST['period'];
 	$year = $_POST['year'];
+	if( isset( $_POST['personnellname'] )  && isset($_POST['personnelfname']) && isset($_POST['personnelmname']) && isset($_POST['dateofbirth'])){
 	$personnellname = $_POST['personnellname'];
 	$personnelfname = $_POST['personnelfname'];
 	$personnelmname = $_POST['personnelmname'];
 
 	$dateofbirth = $_POST['dateofbirth'];
+
+	}else {
+		$personnellname = $personnelfname = $personnelmname = $dateofbirth = "";
+	}
 
 	if($clientname == null){
 			$clientname = " ";
@@ -27,19 +32,19 @@
 			$year == " ";	
 	}else if($year != null){
 				$year = $year.'%';
-	} if($personnellname == null){
+	} if($personnellname == null ){
 			$personnellname = " ";
 	}else if($personnellname != null){
 				$personnellname = $personnellname.'%';
-	} if($personnelfname == null){
+	} if($personnelfname == null ){
 			$personnelfname = " ";
 	}else if($personnelfname != null){
 				$personnelfname = $personnelfname.'%';
-	} if($personnelmname == null){
+	} if($personnelmname == null  ){
 			$personnelmname = " ";
 	}else if($personnelmname != null){
 				$personnelmname = $personnelmname.'%';
-	} if($dateofbirth == null){
+	} if($dateofbirth == null  ){
 				$dateofbirth = " ";
 	}if($month == null){
 				$month == " ";
@@ -194,9 +199,9 @@
 						 while($values = mysqli_fetch_array($result2)	){
 										$counter++;
 										echo "<tr>";
+											echo "<td>".$values['PERSONPAGES_LASTNAME']."</td>";
 											echo "<td>".$values['PERSONPAGES_FIRSTNAME']."</td>";
 											echo "<td>".$values['PERSONPAGES_MIDDLENAME']."</td>";
-											echo "<td>".$values['PERSONPAGES_LASTNAME']."</td>";
 											echo "<td>".$values['PERSONPAGES_DATEOFBIRTH']."</td>";
 											
 											?>

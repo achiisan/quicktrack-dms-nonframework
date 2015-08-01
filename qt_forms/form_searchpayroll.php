@@ -1,4 +1,28 @@
+	<script>
+			// this is the id of the form
+		$("#search-payroll").submit(function(event) {
 
+		    var url = "../models/searchpayroll.php"; // the script where you handle the form input.
+		    $('#search-results').empty(); 
+		     $('#search-results').append('  <div class="mdl-spinner mdl-js-spinner is-active"></div>');
+
+		  
+		    $.ajax({
+		           type: "POST",
+		           url: url,
+		           data: $("#search-payroll").serialize(), // serializes the form's elements.
+		           success: function(data)
+		           {
+		           	  $('#search-results').empty(data); 
+		             $('#search-results').append(data); // show response from the php script.
+		           }
+		         });
+		      event.preventDefault(); // cancel default behavior
+		   return false;// avoid to execute the actual submit of the form.
+		
+
+		});
+	</script>
 		
 		<form id="search-payroll" method="POST">
 		<div class="mdl-card mdl-shadow--2dp through mdl-shadow--8dp card-full card-nopadding mdl-grid">		
@@ -102,7 +126,7 @@
 				</div>
 				
 		
-					<input type="submit" width="100%" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"/>
+					<input type="submit" width="100%" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" return false; />
 					</form>
 		</div>
 					

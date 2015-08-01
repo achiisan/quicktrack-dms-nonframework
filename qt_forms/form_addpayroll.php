@@ -1,3 +1,37 @@
+<script>
+$(document).ready(function(){
+		$index = 1;
+
+		$('#next').click(function(){
+					 event.preventDefault(); // cancel default behavior
+						$index = $index + 1;
+						if($index >= 30){
+							$index = 30;
+						}
+							$('.card-pages:not(#e'+$index+')').css('display', 'none');
+						$('#e'+$index).css('display', 'block');
+
+					
+
+						
+				});
+				$('#prev').click(function(){
+					 event.preventDefault(); // cancel default behavior
+						$index = $index - 1
+						if($index <= 1){
+							$index = 1;
+						}
+							$('.card-pages:not(#e'+$index+')').css('display', 'none');
+							$('#e'+$index).css('display', 'block');
+					
+				});
+
+				$('#e1').css('display', 'block');
+
+});
+
+</script>
+
 <form id="add-payroll" action="../models/addpayroll.php" method="POST">
 	<div class="mdl-cell mdl-cell--12-col mdl-grid">
 		<div class="mdl-cell mdl-cell--6-col">
@@ -99,7 +133,6 @@
 							<button onclick="return false;"  class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect card-close">
 							  X Close this window 
 							</button>
-
 							<?php include 'form_addpayrollpage.php'; ?>
 						</div>
 					</div>
@@ -107,7 +140,15 @@
 				</div>
 			</div>
 		</div>
-	
+		<div class="btn-float">
+			<button id="tt1" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+			 <span class="fi-save"></span>
+			</button>
+			<div class="mdl-tooltip mdl-tooltip--large" for="tt1">
+				Save Current Entry
+			</div>
+			
+		</div>
 	</div>
 	</form>
 

@@ -24,7 +24,7 @@ $pid =  $array['PAYROLL_ID'];
 
 
 for($i=1; $i<31; $i++){
-		
+	
 		array_push($images, $_POST['imglink'.$i]);
 
 	
@@ -54,7 +54,7 @@ for($i=1; $i<31; $i++){
 			$pid_pp =  $array['PAYROLLPAGES_ID'];
 			
 
-			for($j=1; $j<26; $j++){
+			for($j=1; $j<31; $j++){
 
 
 				if($mname[$j-1] == '' && $fname[$j-1] == '' && $lname[$j-1] == '' && $bday[$j-1] == ''){

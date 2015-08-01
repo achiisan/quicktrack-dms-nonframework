@@ -1,4 +1,13 @@
 
+<?php
+if(isset($_GET['success'])){
+  $success = $_GET['success'];
+}else {
+  $success = null ;
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +47,6 @@
     </div>
   </header>
 
-
   <main class="mdl-layout__content main-content">
     <div class="page-content">
       <div class="mdl-grid">
@@ -46,12 +54,14 @@
         <div class="mdl-cell mdl-cell--12-col mdl-grid submenu-module ">
           
           <div class="mdl-cell mdl-cell--4-col page-title-menu"  style="background: rgb(255, 87, 34)">
-              <h4>General Payroll </h4>
+          
+              <h4>   General Payroll </h4>
+
           </div>
 
           <nav class="mdl-cell mdl-cell--8-col">
               <a href="#m1">
-                <div  id="m1" class="nav-pages"  onclick="toggletabs('#add')">
+                <div id="m1" class="nav-pages nav-add">
                   <div class="nav-pages-wrapper">
                       <span class="icon fi-plus"></span>
                       <strong>New Payroll Record</strong>
@@ -60,7 +70,7 @@
               </a>
 
               <a href="#m2">
-                <div id="m2" class="nav-pages" onclick="toggletabs('#search')">
+                <div id="m2" class="nav-pages nav-search">
                   <div class="nav-pages-wrapper">
                       <span class="icon fi-magnifying-glass"></span>
                       <strong>Search  Records</strong>
@@ -68,7 +78,7 @@
               </div>
                </a>
                <a href="#m3">
-                  <div id="m3" class="nav-pages">
+                  <div id="m3" class="nav-pages nav-all">
                   
                    <div class="nav-pages-wrapper">
                       <span class="icon fi-thumbnails"></span>
@@ -84,8 +94,13 @@
         <div class="mdl-cell mdl-cell--1-col">
           &nbsp;
         </div>
+        
         <div class="mdl-cell mdl-cell--10-col content-module">
-         
+              <?php
+            if($success != null){
+              echo "Test";
+            }
+            ?>
             <?php include 'payroll-content.php'; ?>
 
         </div>
