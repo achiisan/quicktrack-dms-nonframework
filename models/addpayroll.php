@@ -76,6 +76,16 @@ for($i=1; $i<31; $i++){
 		}
 	
 }
-	header("Location: ../dashboard/payroll.php?success=1");
-	die();
+	 
+    ?>
+    <script>  
+
+    	alert("Successfully added a payroll.");
+  		setTimeout("location.href = '../dashboard/payroll.php'",500);
+  	</script>
+    <?php
+
+  
+
+	
 ?>

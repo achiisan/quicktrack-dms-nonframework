@@ -28,8 +28,11 @@ $(document).ready(function(){
 
 				$('#e1').css('display', 'block');
 
-					$('#client').blur(function() {
-					    $(".searchresults").empty()
+					$('#client').delay(1000).blur(function() {
+						 setTimeout(function(){
+						 	  $(".searchresults").empty();
+						 	}, 100);
+					  
 					});
 
 });

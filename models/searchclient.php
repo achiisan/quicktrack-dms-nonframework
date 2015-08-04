@@ -6,6 +6,8 @@ $query = $_GET['q'];
  $db = mysqli_connect('localhost', 'root') or die ('Unable to connect. Check your connection parameters.');
  mysqli_select_db($db, 'qtdms');
 
+ 	//$query = mysqli_real_escape_string($db, $query);
+
  	$sql = "SELECT * FROM tbl_client WHERE CLIENT_NAME LIKE '%".$query."%'";
  	// echo $sql;
 
