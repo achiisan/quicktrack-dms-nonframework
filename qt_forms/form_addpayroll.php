@@ -28,10 +28,10 @@ $(document).ready(function(){
 
 				$('#e1').css('display', 'block');
 
-					$('#client').delay(1000).blur(function() {
+					$('#client').blur(function() {
 						 setTimeout(function(){
 						 	  $(".searchresults").empty();
-						 	}, 100);
+						 	}, 300);
 					  
 					});
 

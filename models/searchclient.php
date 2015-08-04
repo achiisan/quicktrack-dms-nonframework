@@ -8,7 +8,7 @@ $query = $_GET['q'];
 
  	//$query = mysqli_real_escape_string($db, $query);
 
- 	$sql = "SELECT * FROM tbl_client WHERE CLIENT_NAME LIKE '%".$query."%'";
+ 	$sql = "SELECT DISTINCT PAYROLL_CLIENT FROM tbl_payroll WHERE PAYROLL_CLIENT LIKE '%".$query."%'";
  	// echo $sql;
 
  	$result=mysqli_query($db,$sql) or die(mysqli_error($db));
@@ -16,10 +16,10 @@ $query = $_GET['q'];
 
 		while($values1 = mysqli_fetch_array($result)){
 			?>
-			<a onclick="setValue('<?php echo $values1['CLIENT_NAME']?>')">
+			<a onclick="setValue('<?php echo $values1['PAYROLL_CLIENT']?>')">
 			<div class="result">
 			<?php
-			echo $values1['CLIENT_NAME'].'</br></div></a>';
+			echo $values1['PAYROLL_CLIENT'].'</br></div></a>';
 			$counter++;
 		}
 
