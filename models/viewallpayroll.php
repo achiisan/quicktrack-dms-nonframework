@@ -32,11 +32,11 @@
 ?>
 
 <div class="mdl-cell mdl-cell--12-col mdl-grid">
-	<div class="mdl-cell mdl-cell--3-col">
-			<table id="client_table" class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
+	<div class="mdl-cell mdl-cell--4-col">
+			<table id="client_table" class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp full-width">
 		  <thead>
 		    <tr>
-		      <th class="mdl-data-table__cell--non-numeric">Client Name</th>
+		      <th class="mdl-data-table__cell--non-numeric full-width">Client Name</th>
 		      <th>Total Entries</th>
 		    
 		    </tr>
@@ -65,7 +65,7 @@
 		  </tbody>
 		</table>
 	</div>
-	<div id="viewall-results" class="mdl-cell mdl-cell--9-col mdl-grid">
+	<div id="viewall-results" class="mdl-cell mdl-cell--8-col mdl-grid">
 				<h4 align="center">Click on a Client to View its Records.</h4>
 	</div>
 </div>

@@ -99,6 +99,10 @@ margin-left: 10%;
 
 }
 
+.full-width {
+	width: 100%;
+}
+
 /*Module dashboard/functions*/
 .loading {
 	position: fixed;

@@ -80,12 +80,13 @@
 
 					  </div>
 					  <div class="mdl-card__actions mdl-card--border mdl-grid">
-					  		<div class="mdl-cell mdl-cell--5-col tbl-long">
-						   		<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp tbl-long">
+					  		<div class="mdl-cell mdl-cell--6-col tbl-long">
+					  			<strong>Page List<strong>
+						   		<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp tbl-long full-width">
 									<thead>
 								    <tr>
-								   		<th class="mdl-data-table__cell--non-numeric">Page #</th>
-									    <th class="mdl-data-table__cell--non-numeric">View Image</th>
+								   		<th class="mdl-data-table__cell--non-numeric full-width">Pg #</th>
+									    <th class="mdl-data-table__cell--non-numeric full-width">View Image</th>
 									    
 								    </tr>
 								  </thead>
@@ -104,7 +105,7 @@
 									  	</th>
 									  	<th>
 									  		<a href="../resources/<?php echo $pagelink;?>">
-									  			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">View Image</button>
+									  			<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">View</button>
 									  		</a>
 									  	</th>
 								  	</tr>
@@ -113,12 +114,13 @@
 									?>
 								</table>
 							</div>
-							<div class="mdl-cell mdl-cell--7-col tbl-long">
-								<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp ">
+							<div class="mdl-cell mdl-cell--12-col tbl-long">
+								<strong>List of Payee</strong>
+								<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp full-width">
 									<thead>
 								    <tr>
-								   		<th class="mdl-data-table__cell--non-numeric">Name</th>
-									    <th class="mdl-data-table__cell--non-numeric">In Page #</th>
+								   		<th class="mdl-data-table__cell--non-numeric full-width">Name</th>
+									    <th class="mdl-data-table__cell--non-numeric full-width">In Page #</th>
 									    
 								    </tr>
 								  </thead>
