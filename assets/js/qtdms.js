@@ -68,3 +68,23 @@ function loadmodule($url, $container) {
    
 		
 }
+
+function instantsearch($value) {
+	$url = "../models/searchclient.php";
+	   $.ajax({
+	           type: "GET",
+	           url: $url,
+	           data: {"q":$value},
+	           success: function(data)
+	           {
+	           	  $('.searchresults').empty(data); 
+	             $('.searchresults').append(data); // show response from the php script.
+	             	
+	           }
+	         });
+}
+
+function setValue($string){
+	$('#client').val($string);
+	$('.searchresults').empty();
+}

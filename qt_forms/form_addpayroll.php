@@ -28,7 +28,13 @@ $(document).ready(function(){
 
 				$('#e1').css('display', 'block');
 
+					$('#client').blur(function() {
+					    $(".searchresults").empty()
+					});
+
 });
+
+
 
 </script>
 
@@ -48,13 +54,10 @@ $(document).ready(function(){
 
 					<div class="mdl-textfield mdl-js-textfield">
 							
-							<select class="mdl-textfield__input" name="client">
-							  <option value="volvo">Volvo</option>
-							  <option value="saab">Saab</option>
-							  <option value="mercedes">Mercedes</option>
-							  <option value="audi">Audi</option>
-							</select>
+							<input id="client" class="mdl-textfield__input" type="text" name="client" onkeyup="instantsearch(this.value)"/>
 							<label class="mdl-textfield__label" for="username">Client</label>
+							<div class="searchresults">
+							</div>
 					</div>
 				</div>
 			</div>

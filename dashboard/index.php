@@ -23,7 +23,10 @@
 <!-- ================================= -->
 <!-- Always shows a header, even in smaller screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
+   <header class="hdr-main">
+    <div class="mdl-layout__drawer-button">
+      <i class="fi-list"></i>
+    </div>
     <div class="mdl-layout__header-row">
       <!-- Title -->
       <span class="mdl-layout-title">

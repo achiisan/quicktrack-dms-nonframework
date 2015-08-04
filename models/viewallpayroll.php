@@ -59,7 +59,6 @@
 		      <td><?php echo $count ?></td>
 		      
 		    </tr>
-		
 		  	<?php
 		  		}
 		  	?>

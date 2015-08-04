@@ -46,7 +46,7 @@
 					<label class="mdl-textfield__label" for="username">Password</label>
 				</div>
 
-				<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"/>
+				<input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" style="margin-left: 15px" />
 			</form>
 		</div>
 

@@ -1,5 +1,7 @@
 
 <?php
+  error_reporting(E_ERROR); //Remove any error prompts
+  
 if(isset($_GET['success'])){
   $success = $_GET['success'];
 }else {
@@ -96,11 +98,7 @@ if(isset($_GET['success'])){
         </div>
         
         <div class="mdl-cell mdl-cell--10-col content-module">
-              <?php
-            if($success != null){
-              echo "Test";
-            }
-            ?>
+             
             <?php include 'payroll-content.php'; ?>
 
         </div>

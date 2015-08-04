@@ -32,7 +32,7 @@
               <h2>Billing</h2>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a href="billing.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               View Dashboard
             </a>
           </div>
@@ -46,7 +46,7 @@
               <h2>SG Daily Logbook</h2>
           </div>
           <div class="mdl-card__actions mdl-card--border">
-            <a href="logbook.php" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <a href="#" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
               View Dashboard
             </a>
         </div>

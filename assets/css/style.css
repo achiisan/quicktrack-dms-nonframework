@@ -215,7 +215,7 @@ font-size: 35px;
 /*Splash screen- dashboard on payroll*/
 
 #splash {
-	background: url('../img/QTSILOGO.png') no-repeat;
+	/*background: url('../img/QTSILOGO.png') no-repeat;*/
 	background-position: center;
 	background-size: 200px;
 }
@@ -293,6 +293,10 @@ font-size: 35px;
 	text-align: center;
 }
 
+.dashboard-fxn {
+	width: 100%;
+}
+
 	/*text field change behavior on this kind of div ^^*/
 
 	.card-full .mdl-textfield {
@@ -329,4 +333,28 @@ font-size: 35px;
 
 .card-search {
 	width: 100%;
+}
+
+/*Instant search results*/
+
+.searchresults {
+	width: 100%;
+	height: auto;
+	background: white;
+	
+}
+
+.result {
+	width: 100%;
+	color: black;
+	height: 20px;
+	padding: 10px;
+	border-bottom: solid black 2px;
+}
+
+.result:hover {
+	
+	background: grey;
+	height: 20px;
+	color: white;
 }

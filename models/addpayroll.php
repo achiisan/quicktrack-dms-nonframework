@@ -1,10 +1,16 @@
 
 <?php
+// include '../models/searchclient.php';
 
 include '../models/connect.php';
 $client = $_POST['client'];
 $period = $_POST['month'] . '-'. $_POST['period'].'-'. $_POST['year'];
 
+
+
+// if($counter == 0){
+// 	$query =  'INSERT INTO tbl_client (CLIENT_NAME) VALUES ("'.$client.'","'.$period.'")';
+// }
 
 $images = array();
 $fname = array();
@@ -61,7 +67,8 @@ for($i=1; $i<31; $i++){
 					
 				}else{
 
-					$query =  'INSERT INTO tbl_personpages (PERSONPAGES_PAYROLLID, PERSONPAGES_PAYROLLPAGEID, PERSONPAGES_LASTNAME, PERSONPAGES_FIRSTNAME, PERSONPAGES_MIDDLENAME, PERSONPAGES_DATEOFBIRTH) VALUES ("'.$pid.'","'.$pid_pp.'","'.$lname[$j-1].'", "'.$fname[$j-1].'", "'.$mname[$j-1].'", "'.$bday[$j-1].'")';
+					$query =  'INSERT INTO tbl_personpages
+					 (PERSONPAGES_PAYROLLID, PERSONPAGES_PAYROLLPAGEID, PERSONPAGES_LASTNAME, PERSONPAGES_FIRSTNAME, PERSONPAGES_MIDDLENAME, PERSONPAGES_DATEOFBIRTH) VALUES ("'.$pid.'","'.$pid_pp.'","'.$lname[$j-1].'", "'.$fname[$j-1].'", "'.$mname[$j-1].'", "'.$bday[$j-1].'")';
 					$result = mysqli_query($con, $query) or die(mysqli_error($con));
 				}
 	
@@ -69,6 +76,6 @@ for($i=1; $i<31; $i++){
 		}
 	
 }
-	header("Location: ../dashboard/payroll.php");
+	header("Location: ../dashboard/payroll.php?success=1");
 	die();
 ?>
